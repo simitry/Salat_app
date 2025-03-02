@@ -45,23 +45,22 @@ def insert_data(table_name):
         print(f'Error inserting data :{err}')
     
  
-def update_to_tb(table_name,confirm=False):
+#update data ------------------------------------------------------------------------------------------ 
+def update_to_tb(salat_name,table_name,confirm=False):
     if confirm:
         try:
             mytable = mydb.cursor()
             mytable.execute(f"""update {table_name}
-                                    set Fajr = 1
+                                    set {salat_name} = 1
                                     where id =(select max(id) from {table_name})""")
             mydb.commit()
         except mysqlcon.Error as err:
             print(f'Error updating data :{err}')
             
-            
+           
 Ntable = "test4"   
 confirm = True         
-create_table(Ntable)
-insert_data(Ntable)
-update_to_tb(Ntable,confirm)
+update_to_tb("Sunrise",Ntable,confirm)
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       
              
 # mytable = mydb.cursor()
