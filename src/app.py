@@ -1,12 +1,4 @@
-import customtkinter as ctk
+from Class import master
 
-#ini the app-----------------
-app = ctk.CTk()
-app.title("Salat-App")
-#----------------------------
-app.geometry("500x500")
-
-
-
-
+app = master.App()
 app.mainloop()

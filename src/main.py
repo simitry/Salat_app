@@ -1,4 +1,4 @@
-from connect import create_table as ct
+# from connect import create_table as ct
 from salat_api import *
 from datetime import datetime
 
@@ -12,11 +12,9 @@ def compare():
     for elem in salat_name:
         if timing[elem] == datetime.now().strftime("%H:%M"): #strftime to customize output
             print(f'time for {elem}')
-        else:
-            print('no')
 
     print(datetime.today())
     
     
-# compare()
-ct("" , "test", "test4")
+compare()
+# ct("" , "test", "test4")
