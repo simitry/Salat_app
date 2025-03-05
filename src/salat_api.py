@@ -1,8 +1,9 @@
 import requests
-import json
+# import json
+from datetime import datetime
 
 # important -----------------------
-date = "26-01-2025"
+date = datetime.now().strftime("%d-%m-%Y")
 endpoint = "timings"
 
 latitude = "31.628674"      # lat and lon of Marrakech
@@ -26,5 +27,5 @@ data = response.json()
 salat = data.get("data" , {})
 timing = salat.get("timings",{})
 
-# print(timing["Fajr"])
+# print(timing)
 
