@@ -28,11 +28,12 @@ def compare():
 
     for elem in salat_name:
         if timing[elem] == datetime.now().strftime("%H:%M"): #strftime to customize output
+        # if timing[elem] == "12:44" :
             notification.notify(
                 title='Salat-App',
                 message=f'time for {elem}',
                 app_name ='Salat-App',
-                app_icon = 'img/icon.ico',
+                # app_icon = 'icon.ico',
                 timeout=10
             )
             sleep (60)

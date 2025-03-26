@@ -27,5 +27,5 @@ data = response.json()
 salat = data.get("data" , {})
 timing = salat.get("timings",{})
 
-# print(timing)
+print(timing)
 
